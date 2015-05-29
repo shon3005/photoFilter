@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ICA-1M-sY3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PhotoFilters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mr-Burns-screenshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qka-fv-90I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qka-fv-90I" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="6HN-4Y-GN8"/>
+                            <constraint firstItem="Qka-fv-90I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OCw-pZ-jTL"/>
+                            <constraint firstAttribute="bottom" secondItem="Qka-fv-90I" secondAttribute="bottom" id="cJx-TW-yF9"/>
+                            <constraint firstAttribute="trailing" secondItem="Qka-fv-90I" secondAttribute="trailing" id="cvF-cu-K4I"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="no0-eK-tco"/>
+                        <barButtonItem title="Apply Filter" id="OIP-vZ-O0y">
+                            <connections>
+                                <action selector="applyFilter:" destination="vXZ-lx-hvc" id="Q6L-mH-VZe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="5Mr-FP-39K"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Filter" id="hTH-PA-qpP"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="Qka-fv-90I" id="srP-J9-Lki"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yoW-xk-50i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="ICA-1M-sY3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M5C-Hl-Tuc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="hOQ-KC-voZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="tAG-RO-3vz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tar-Jd-OxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mr-Burns-screenshot.jpg" width="615" height="345"/>
+    </resources>
+</document>
